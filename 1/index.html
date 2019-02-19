@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="app.js">
+    </script>
+    
+</head>
+
+<body>
+            
+    <header>Quiz <img src="flagaPlik/flag3.png"  /></header>
+<!--
+    <div id="flaga">
+            
+        </div> 
+-->
+<!--
+    <input type="file" id="openFile" />
+    <br>
+    <pre id="a.txt"></pre>
+-->
+    <div id="container">
+            
+            <div id="butt">
+        <!--    <button type="text" onkeydown="myFunction()">Losuj Pytanie</button>-->
+                <button id="MainButton" type="text" onClick="myFunction(); " disabled>Losuj Pytanie </button>
+                <button id="PrzyciskStart" onclick="startT()">Start</button>
+                <button id="PrzyciskKoniec" onclick="endT()" disabled>End</button>
+            </div>
+
+
+
+
+            <div id="question">
+        <!--    <p>a</p>-->
+            </div>
+            <div id="two">
+                <div id="answer">
+                <input type="text" id="ans"/>
+                </div>
+
+                <div id="checker">
+                <input  type="submit" onclick="checkAnswer()" value="Sprawdź" id="toCheck" />
+<!--                    onClick="odp()"-->
+                </div>
+            </div>
+        <form id="userForm" >
+            <div id="check">
+<!--
+            <br>
+                Poprawna odpowiedz:
+-->
+            </div>
+            <div id="Result">
+<!--
+            Gracz 1(klawisz "z"):
+                Gracz 2(klawisz "m"):
+-->
+    
+<!--
+            </div>
+    <div id="Result2">
+            </div>
+-->
+<!--
+            </div>
+            <div id="Dalej">
+              <input  type="submit" onclick="Further()" value="Graj dalej" ></input>
+            </div>
+    </div>
+                    -->
+
+          </div>
+<!--              <div class="stopwatch">Najlepsze czasy: </div>-->
+                        <div id="Stop">
+                            <button id="StopGra" type="text" onClick="resetForm()">Reset gry</button>
+                        </div>
+    
+            <div id="footer">
+                
+		Quiz &copy; Wszelkie prawa zastrzeżone 
+		</div>
+                 </form>
+       </div> 
+<!--    container-->
+    
+    <br>
+ 
+</body>
+</html>
