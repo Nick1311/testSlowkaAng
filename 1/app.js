@@ -1,7 +1,6 @@
 var gracz1Wynik=0;
-//var gracz2Wynik=0;
 var gracz1;
-//var gracz2;
+var karneSekundy = 0;
 
   var x;
   var time=0;
@@ -21,8 +20,9 @@ function endT() {
   timeDiff /= 1000;
 
   // get seconds 
-  var seconds = timeDiff;
+  var seconds = timeDiff+karneSekundy;
     PrzyciskKoniec.disabled = true;
+    document.getElementById('PrzyciskKoniec').setAttribute('style', 'background-color: buttonface');
   console.log(seconds + " seconds");
 // alert("KONIEC GRY! wynik: "+seconds+"  sekund");
     document.getElementById("Result").innerHTML="Koniec gry! Twój wynik to: "+seconds+" sekund";
@@ -33,10 +33,12 @@ function endT() {
 
 function myFunction() {
    MainButton.disabled = true;
+    toCheck.disabled = false;
 //    var a = "WWW";
     ans.value="";
     document.getElementById("check").innerHTML="";
 //    function end(){
+    //        TO DO TESTOWANIA nr1/2 !!!!!
          if(gracz1Wynik ==5 )
             {
                 
@@ -66,29 +68,34 @@ function myFunction() {
 
  function checkAnswer()
 	{
-        
+        toCheck.disabled = true;
 	var playerAnswer = document.getElementById("ans").value;
 //        alert(playerAnswer);
-	if (playerAnswer==questionsArray[x*6+5]) {document.getElementById("check").innerHTML="Dobrze!"; 
-         //   if(gracz1==1)  {gracz1Wynik++;} 
-         //   if(gracz2==1)  {gracz2Wynik++;} 
-                                              gracz1Wynik++;
+	if (playerAnswer==questionsArray[x*6+5]) {
+        document.getElementById('check').setAttribute('style', 'color: green');
+        document.getElementById("check").innerHTML="Dobrze!"; 
+         gracz1Wynik++;
                                              }
-	else if (playerAnswer!=questionsArray[x*6+5]) {document.getElementById("check").innerHTML="Zle! Poprawna odpowiedź: "+ questionsArray[x*6+5];
-//          if(gracz1==2)  {gracz1Wynik--;} 
-          //  if(gracz2==1)  {gracz2Wynik--;}                                         
-                                                  }
+	else if (playerAnswer!=questionsArray[x*6+5]) 
+        {
+            document.getElementById('check').setAttribute('style', 'color: red');
+        document.getElementById("check").innerHTML="Zle! Poprawna odpowiedź: "+  questionsArray[x*6+5];
+        karneSekundy+=3;
+        }
         document.getElementById("Result").innerHTML="Zdobyte punkty: "+gracz1Wynik+"/5";
   //  document.getElementById("Result2").innerHTML="Gracz 2 (klawisz m): "+gracz2Wynik+"/5";
 //	else if (liczba==0) document.getElementById("wynik").innerHTML="zero";
 //	else document.getElementById("wynik").innerHTML="to nie liczba";
        
-//        TO DO TESTOWANIA !!!!!
+//        TO DO TESTOWANIA nr2/2 !!!!!
             if(gracz1Wynik ==5 )
             {
+                
                 toCheck.disabled = true;
             PrzyciskKoniec.disabled = false;
         document.getElementById("MainButton").innerHTML="Zakoncz";
+//                '<button id="PrzyciskKoniec" style= "backgroundcolor:green;"/>'
+                document.getElementById('PrzyciskKoniec').setAttribute('style', 'background-color: green');
             }
         
 //        if(gracz2Wynik ==5 )
@@ -780,7 +787,7 @@ var questionsArray =[
 "O",
 "R",
 "D",
-"w_celu",
+"w celu",
 "Further ( d _ _ _ _ )",
 "W",
 "O",
@@ -816,7 +823,7 @@ var questionsArray =[
 "O",
 "R",
 "D",
-"ze_wzgledu_na",
+"ze wzgledu na",
 "Examine",
 "W",
 "O",
@@ -834,7 +841,7 @@ var questionsArray =[
 "O",
 "R",
 "D",
-"skladac_sie",
+"skladac sie",
 "Store ( _ _ _ _ _ _ _ _ y _ _ _ )",
 "W",
 "O",

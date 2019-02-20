@@ -44,7 +44,7 @@
                 </div>
 
                 <div id="checker">
-                <input  type="submit" onclick="checkAnswer()" value="Sprawdź" id="toCheck" />
+                <input  type="submit" onclick="checkAnswer()" value="Sprawdź" id="toCheck" disabled />
 <!--                    onClick="odp()"-->
                 </div>
             </div>
@@ -55,7 +55,7 @@
                 Poprawna odpowiedz:
 -->
             </div>
-            <div id="Result">
+            <div id="Result">Odgadnij jak najszybciej 5 słów! 
 <!--
             Gracz 1(klawisz "z"):
                 Gracz 2(klawisz "m"):
@@ -75,7 +75,17 @@
                     -->
 
           </div>
-<!--              <div class="stopwatch">Najlepsze czasy: </div>-->
+                <div class="stopwatch">Punktacja: <br/>
+                    poniżej 45 sekund - bdb <br/>
+                    45-55 sekund - db <br/>
+                    55-75 sekund - dst <br/>
+                    75-95 sekund - dob <br/>
+                    powyżej 95 sekund - ndst <br/>
+                    Za złą odpowiedź dodatkowo 3 sekundy karne! <br/>
+            
+                    
+                    
+                </div>
                         <div id="Stop">
                             <button id="StopGra" type="text" onClick="resetForm()">Reset gry</button>
                         </div>
