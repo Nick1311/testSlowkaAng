@@ -2,8 +2,8 @@ var gracz1Wynik=0;
 var gracz1;
 var karneSekundy = 0;
 
-  var x;
-  var time=0;
+var x;
+var time=0;
 var startTime, endTime;
 
 function startT() {
@@ -45,12 +45,7 @@ function myFunction() {
                 window.location.reload();
             };
 
-//        if(gracz2Wynik == 5)
-//            {
-//                alert("Gracz 2 wygrywa!");
-//                window.location.reload();
-//            };
-//      };  
+ 
     x= Math.floor((Math.random() * 130) + 1);
     var a = questionsArray[x*6];
     function wypisz_haslo()
@@ -83,30 +78,22 @@ function myFunction() {
         karneSekundy+=3;
         }
         document.getElementById("Result").innerHTML="Zdobyte punkty: "+gracz1Wynik+"/5";
-  //  document.getElementById("Result2").innerHTML="Gracz 2 (klawisz m): "+gracz2Wynik+"/5";
-//	else if (liczba==0) document.getElementById("wynik").innerHTML="zero";
-//	else document.getElementById("wynik").innerHTML="to nie liczba";
+
        
 //        TO DO TESTOWANIA nr2/2 !!!!!
             if(gracz1Wynik ==5 )
             {
                 
                 toCheck.disabled = true;
-            PrzyciskKoniec.disabled = false;
-        document.getElementById("MainButton").innerHTML="Zakoncz";
-//                '<button id="PrzyciskKoniec" style= "backgroundcolor:green;"/>'
+                PrzyciskKoniec.disabled = false;
+                document.getElementById("MainButton").innerHTML="Zakoncz";
                 document.getElementById('PrzyciskKoniec').setAttribute('style', 'background-color: green');
             }
         
-//        if(gracz2Wynik ==5 )
-//            {
-//        document.getElementById("MainButton").innerHTML="Zakoncz";
-//            }
+
         if(PrzyciskKoniec.disabled != false)
         {MainButton.disabled = false;}
-        gracz1=0;
-   // gracz2=0;
-        
+        gracz1=0;      
 }
 
  function resetForm(){
@@ -932,11 +919,5 @@ var questionsArray =[
 "R",
 "D",
 "mozliwosci",
-//"Whirl ( _ _ _ _ _ _   _ _ _ )",
-//"W",
-//"O",
-//"R",
-//"D",
-//"krecic_sie",
 ];
 

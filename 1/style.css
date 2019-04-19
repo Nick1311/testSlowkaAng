@@ -93,11 +93,6 @@ header{
     border-bottom: 3px;
     border-bottom-color: darkgrey;
     border-bottom-style: solid;
-   
-/*
-    float: right;
-    width: 28%;
-*/
 }
 
 #checker
@@ -105,8 +100,6 @@ header{
     margin-left: 10px;
     float:left;
     text-align: left;
-/*    padding-left: 20px;*/
-/*    width: 396px;*/
     width: 240px;
 /*     display: inline-block;*/
 }
@@ -159,9 +152,7 @@ header{
 
 #stop
 {
-    clear: both;
-   
-    
+    clear: both; 
 }
 
 #StopGra
